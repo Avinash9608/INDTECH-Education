@@ -1,19 +1,38 @@
 import React from "react";
+// import "./Glimpse.css";
 
-// Import images
-import img1 from "../../assets/images/img_1.svg";
-import img2 from "../../assets/images/img_2.svg";
-import img3 from "../../assets/images/img_3.svg";
-import img4 from "../../assets/images/img_4.svg";
-import img5 from "../../assets/images/img_5.svg";
-import img6 from "../../assets/images/img_6.svg";
-import img7 from "../../assets/images/img_7.svg";
-import img8 from "../../assets/images/img_8.svg";
+// Import images (replace with your actual image paths)
+import celebration4 from "../../assets/images/celebration-4.jpg";
+import celebration5 from "../../assets/images/celebration-5.jpg";
+import celebration6 from "../../assets/images/celebration-6.jpg";
+import celebration7 from "../../assets/images/celebration-7.jpg";
+import celebration8 from "../../assets/images/celebration-8.jpg";
+import celebration9 from "../../assets/images/celebration-9.jpg";
+import celebration10 from "../../assets/images/celebration-10.jpg";
+import celebration11 from "../../assets/images/celebration-11.jpg";
+import celebration12 from "../../assets/images/celebration-12.jpg";
+import celebration13 from "../../assets/images/celebration-13.jpg";
+import celebration14 from "../../assets/images/celebration-14.jpg";
 
 const Glimpse = () => {
   // Data for the marquee images
-  const marqueeImages1 = [img1, img2, img3, img4, img1, img2];
-  const marqueeImages2 = [img5, img6, img7, img8, img6, img7, img8];
+  const images1 = [
+    { big: celebration4, small1: celebration5, small2: celebration6 },
+    { big: celebration7, small1: celebration8, small2: celebration9 },
+    { big: celebration4, small1: celebration5, small2: celebration6 },
+    { big: celebration7, small1: celebration8, small2: celebration9 },
+    { big: celebration4, small1: celebration5, small2: celebration6 },
+    { big: celebration7, small1: celebration8, small2: celebration9 },
+  ];
+
+  const images2 = [
+    { big: celebration10, small1: celebration11, small2: celebration12 },
+    { big: celebration13, small1: celebration14, small2: celebration12 },
+    { big: celebration10, small1: celebration11, small2: celebration12 },
+    { big: celebration13, small1: celebration14, small2: celebration12 },
+    { big: celebration10, small1: celebration11, small2: celebration12 },
+    { big: celebration13, small1: celebration14, small2: celebration12 },
+  ];
 
   return (
     <section className="lightgraybg overflow-hidden py-80" id="lifeandculture">
@@ -43,23 +62,39 @@ const Glimpse = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12 p-0">
-            <div className="section-life-culture portfolioreel mt-40">
+            <div className="section-life-culture mt-40">
               {/* First Marquee */}
               <div id="marquee">
                 <div className="view">
                   <div className="pic-container">
-                    {marqueeImages1.map((img, index) => (
-                      <div key={index} className="pic">
+                    {images1.map((image, index) => (
+                      <div className="pic" key={index}>
                         <div className="img-div">
                           <div className="img-big">
                             <img
-                              src={img}
-                              width="750"
-                              height="500"
-                              loading="lazy"
+                              src={image.big}
                               alt="celebration"
                               className="img-fluid"
+                              loading="lazy"
                             />
+                          </div>
+                          <div className="img-small">
+                            <div className="small-one">
+                              <img
+                                src={image.small1}
+                                alt="celebration"
+                                className="img-fluid"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div className="small-two">
+                              <img
+                                src={image.small2}
+                                alt="celebration"
+                                className="img-fluid"
+                                loading="lazy"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -72,18 +107,34 @@ const Glimpse = () => {
               <div id="marquee">
                 <div className="view">
                   <div className="pic-container pic-container-reverse">
-                    {marqueeImages2.map((img, index) => (
-                      <div key={index} className="pic">
+                    {images2.map((image, index) => (
+                      <div className="pic" key={index}>
                         <div className="img-div">
                           <div className="img-big">
                             <img
-                              src={img}
-                              width="750"
-                              height="500"
-                              loading="lazy"
+                              src={image.big}
                               alt="celebration"
                               className="img-fluid"
+                              loading="lazy"
                             />
+                          </div>
+                          <div className="img-small">
+                            <div className="small-one">
+                              <img
+                                src={image.small1}
+                                alt="celebration"
+                                className="img-fluid"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div className="small-two">
+                              <img
+                                src={image.small2}
+                                alt="celebration"
+                                className="img-fluid"
+                                loading="lazy"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>

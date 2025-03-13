@@ -18,7 +18,7 @@ const HeroBanner = () => {
                 <h2 className="text-white fs-50 fw-bold">
                   Education App Development Company
                 </h2>
-                <p className="text-white pt-2">
+                <p className="text-white pt-2 thin_p">
                   INDTechMark provides cutting-edge education app development
                   services that set you apart from the competition.
                 </p>
